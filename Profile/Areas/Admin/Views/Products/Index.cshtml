@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Model.EF.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section header {
+    Information Product
+}
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">List Product </h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        @*<table id="example2" class="table table-bordered table-hover">*@
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>MetaTitle</th>
+                                <th>MetaKeywords</th>
+                                <th>Price</th>
+                                <th>Image</th>
+                                <th>Quantity</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr id="row_@item.ID">
+                                    <td>@item.Name </td>
+                                    <td>
+                                        @item.MetaTitle
+                                    </td>
+                                    <td>@item.MetaKeywords</td>
+                                    <td>@item.Price</td>
+                                    <td>@item.Image</td>
+                                    <td>@item.Quantity</td>
+                                    <td>
+                                        <a href="/Admin/Products/Edit/@item.ID"> Edit </a>
+                                        <a href="/Admin/Products/Details/@item.ID"> Details </a>
+                                        @Ajax.ActionLink("Delete", "Delete", new { @id = item.ID }, new AjaxOptions
+                                   {
+                                       Confirm = "You want delete this records ?",
+                                       OnComplete = "$('#row_" + @item.ID + "').remove()",
+                                       HttpMethod = "Delete"
+                                   })
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+                    @*@Html.PagedListPager(Model, page => @Url.Action("Index", new { page }))*@
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('#example1').DataTable();
+    });
+</script>
+
