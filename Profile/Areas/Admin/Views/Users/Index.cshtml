@@ -13,6 +13,7 @@
      User
 }
 @section jsFooter {
+
 <script src="~/Areas/Assets/main/js/userController.js"></script>
     }
 
@@ -69,7 +70,7 @@
 
                         </table>
                         @*@Html.PagedListPager(Model, page => @Url.Action("Index", new { page }))*@
-</div>
+                </div>
                 <!-- /.box-body -->
             </div>
             <!-- /.box -->
@@ -84,16 +85,4 @@
     $(document).ready(function () {
         $('#example1').DataTable();
     });
-        //$(document).ready(function() {
-
-        //         $('#example1').DataTable()
-        //        $('#example2').DataTable({
-        //            'paging'      : true,
-        //            'lengthChange': false,
-        //            'searching'   : false,
-        //            'ordering'    : true,
-        //            'info'        : true,
-        //            'autoWidth'   : false
-        //        })
-        //})
 </script>

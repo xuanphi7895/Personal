@@ -20,6 +20,7 @@ namespace Profile.Areas.Admin.Controllers
             return View(model);
         }
         [HttpGet]
+       
         public ActionResult Create()
         {
             var model = new Category();

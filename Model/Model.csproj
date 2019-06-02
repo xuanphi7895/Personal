@@ -60,8 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\CategoryDao.cs" />
+    <Compile Include="DAO\MenuDao.cs" />
     <Compile Include="DAO\ProductCategoryDao.cs" />
     <Compile Include="DAO\ProductsDao.cs" />
+    <Compile Include="DAO\SlideDao.cs" />
     <Compile Include="DAO\UsersDao.cs" />
     <Compile Include="EF\About.cs" />
     <Compile Include="EF\Category.cs" />

@@ -14,20 +14,30 @@ namespace Model.DAO
         {
             db = new OnlineShopDbContext();
         }
-        public IEnumerable<Product> ListProducts()
+        public List<Product> ListProducts()
         {
             return db.Products.ToList();
         }
+        //public IEnumerable<Product> ListProducts()
+        //{
+        //    return db.Products.ToList();
+        //}
+
         public long Insert(Product entity)
         {
             db.Products.Add(entity);
             db.SaveChanges();
             return entity.ID;
         }
+        public Product GetDetail(long id)
+        {
+            return db.Products.Find(id);
+        }
         public Product GetById(long id)
         {
             return db.Products.Find(id);
         }
+        
         public bool Update(Product entity)
         {
             try
@@ -65,7 +75,23 @@ namespace Model.DAO
             }
 
         }
-         public bool Delete(long id)
+        //public bool IsUpdate(Product entity)
+        //{
+        //    try
+        //    {
+        //        var model = db.Products.Find(entity);
+        //        model.Price = entity.Price;
+        //        db.SaveChanges();
+        //        return true;
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        return false;
+        //    }
+        //}
+        
+        public bool Delete(long id)
         {
             try
             {

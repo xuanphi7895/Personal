@@ -207,6 +207,7 @@
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DetailProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -5508,6 +5509,7 @@
     <Content Include="Areas\Assets\bower_components\jquery-ui\ui\widget.js" />
     <Content Include="Areas\Assets\bower_components\jquery\AUTHORS.txt" />
     <Content Include="Areas\Assets\bower_components\jquery\dist\core.js" />
+    <Content Include="Areas\Assets\bower_components\jquery\dist\jquery-3.3.1.js" />
     <Content Include="Areas\Assets\bower_components\jquery\dist\jquery.js" />
     <Content Include="Areas\Assets\bower_components\jquery\dist\jquery.min.js" />
     <Content Include="Areas\Assets\bower_components\jquery\dist\jquery.slim.js" />
@@ -6591,7 +6593,9 @@
     <Content Include="Areas\Assets\documentation\docs.js" />
     <Content Include="Areas\Assets\documentation\index.html" />
     <Content Include="Areas\Assets\documentation\style.css" />
+    <Content Include="Areas\Assets\main\js\productcontroller.js" />
     <Content Include="Areas\Assets\main\js\userController.js" />
+    <Content Include="Areas\Assets\plugins\bootbox\bootbox.min.js" />
     <Content Include="Areas\Assets\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="Areas\Assets\plugins\bootstrap-slider\slider.css" />
     <Content Include="Areas\Assets\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.js" />
@@ -7144,6 +7148,7 @@
     <Content Include="Areas\Assets\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
     <Content Include="Areas\Assets\plugins\jvectormap\jquery-jvectormap-usa-en.js" />
     <Content Include="Areas\Assets\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Areas\Assets\plugins\mustachejs\mustache.min.js" />
     <Content Include="Areas\Assets\plugins\pace\pace.css" />
     <Content Include="Areas\Assets\plugins\pace\pace.js" />
     <Content Include="Areas\Assets\plugins\pace\pace.min.css" />
@@ -8061,6 +8066,7 @@
     <Content Include="Areas\Client\main_font\glyphicons-halflings-regular.ttf" />
     <Content Include="Areas\Client\main_font\glyphicons-halflings-regular.woff" />
     <Content Include="Areas\Client\main_font\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\Products\Detail.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor_source.js" />
     <Content Include="Scripts\ckeditor\config.js" />
@@ -8400,9 +8406,12 @@
     <Content Include="Scripts\ckeditor\skins\v2\skin.js" />
     <Content Include="Scripts\ckeditor\skins\v2\templates.css" />
     <Content Include="Scripts\ckeditor\themes\default\theme.js" />
+    <Content Include="Scripts\imagezoom.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.flexisel.js" />
+    <Content Include="Scripts\jquery.flexslider.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -8425,6 +8434,12 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\MenuTop.cshtml" />
+    <Content Include="Views\Shared\Slide.cshtml" />
+    <Content Include="Views\Shared\MenuNavigation.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\DetailProducts\Single.cshtml" />
+    <Content Include="Views\DetailProducts\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -8432,6 +8447,7 @@
     <Folder Include="Areas\Assets\main\css\" />
     <Folder Include="Content\admin\js\" />
     <Folder Include="Images\" />
+    <Folder Include="Views\Menu\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
