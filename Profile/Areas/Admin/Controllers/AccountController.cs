@@ -7,6 +7,8 @@ using Profile.Areas.Admin.Controllers;
 using Model.EF;
 using Model.DAO;
 using Profile.Common;
+using Facebook;
+using System.Configuration;
 
 
 namespace Profile.Areas.Admin.Controllers
@@ -18,6 +20,19 @@ namespace Profile.Areas.Admin.Controllers
         {
             return View();
         }
+        
+
+        //public ActionResult LoginFacebook()
+        //{
+        //    var fb = new FacebookClient();
+        //    var loginUrl = fb.GetLoginUrl(
+        //        new { clien_id = ConfigurationManager.AppSettings["FbAppId"],
+        //               client_serect = ConfigurationManager.AppSettings["FbAppSerect"].
+        //               redirect_uri = RedirectUri
+        //        });
+        //}
+
+
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]

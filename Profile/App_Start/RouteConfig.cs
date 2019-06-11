@@ -18,6 +18,13 @@ namespace Profile
                 defaults: new { controller = "DetailProducts", action = "Detail", id = UrlParameter.Optional },
                 namespaces: new[] { "Profile.Controllers" }
             );
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute(
+                name: "Add Cart",
+                url: "them-gioi-hang",
+                defaults: new { controller = "Cart", action = "AddItem", id = UrlParameter.Optional },
+                namespaces: new[] { "Profile.Controllers" }
+            );
             //Router name Default luôn lấy mặc định sau cùng nếu không có các Router đứng phía trước đó.
             routes.MapRoute(
                 name: "Default",

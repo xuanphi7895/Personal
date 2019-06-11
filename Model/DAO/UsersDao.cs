@@ -43,19 +43,19 @@ namespace Model.DAO
         {
             try
             {
-                var user = db.Users.Find(entity.ID);
-                user.Name = entity.Name;
-                user.Phone = entity.Phone;
-                user.Address = entity.Address;
-                user.CreatedBy = entity.CreatedBy;
-                user.DistrictID = entity.DistrictID;
-                user.Email = entity.Email;
-                user.GroupID = entity.GroupID;
-                user.ModifiedBy = entity.ModifiedBy;
+                var user          = db.Users.Find(entity.ID);
+                user.Name         = entity.Name;
+                user.Phone        = entity.Phone;
+                user.Address      = entity.Address;
+                user.CreatedBy    = entity.CreatedBy;
+                user.DistrictID   = entity.DistrictID;
+                user.Email        = entity.Email;
+                user.GroupID      = entity.GroupID;
+                user.ModifiedBy   = entity.ModifiedBy;
                 user.ModifiedDate = DateTime.Now;
-                user.ProvinceID = entity.ProvinceID;
-                user.Status = entity.Status;
-                user.Password = entity.Password;
+                user.ProvinceID   = entity.ProvinceID;
+                user.Status       = entity.Status;
+                user.Password     = entity.Password;
                 db.SaveChanges();
                 return true;
             }

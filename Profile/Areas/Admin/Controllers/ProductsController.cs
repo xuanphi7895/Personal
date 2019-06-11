@@ -167,14 +167,14 @@ namespace Profile.Areas.Admin.Controllers
                 catch (Exception ex)
                 {
 
-                    status = false;
+                    status  = false;
                     message = ex.Message;
                 }
 
             }
             return Json(new
             {
-                status = status,
+                status  = status,
                 message = message
             });
 
